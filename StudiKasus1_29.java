@@ -9,6 +9,11 @@ public class StudiKasus1_29 {
         int totalHarga, diskon, totalBayar;
         int kembalian, kurang;
 
+        System.out.print("Masukkan jumlah cup yang dibeli: ");
+        jumlahCup = sc.nextInt();
+        System.out.print("Masukkan jumlah uang yang dibayarkan: ");
+        uangBayar = sc.nextInt();
+        
         sc.close();
     }
 }
