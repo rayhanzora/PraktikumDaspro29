@@ -15,6 +15,7 @@ public class StudiKasus1_29 {
         uangBayar = sc.nextInt();
 
         totalHarga = jumlahCup * hargaPerCup;
+
         diskon = 0;
         if (totalHarga >= 100000) {
             diskon = totalHarga * 10/ 100;
