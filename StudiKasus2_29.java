@@ -5,7 +5,7 @@ public class StudiKasus2_29 {
         Scanner sc = new Scanner(System.in);
         String namaMahasiswa, jenisKegiatan;
         int jumlahDokumen, peringkatJuara;
-        String status;
+        int statusPKM;
 
         System.out.print("Nama mahasiswa: ");
         namaMahasiswa = sc.nextLine();
@@ -26,8 +26,20 @@ public class StudiKasus2_29 {
             } else {
                 System.out.println("Status: Dokumen tidak lengkap (kurang " + (4-jumlahDokumen)+ "dokumen). Dana penghargaan tidak diberikan");
             }
+        } else if (jenisKegiatan.equals("PKM")){
+            System.out.print("Status pendanaan PKM (1/0): ");
+            statusPKM = sc.nextInt();
+            if (jumlahDokumen == 4) {
+                if (statusPKM == 1) {
+                    System.out.println("Status: Dana penghargaan diberikan");
+                } else {
+                    System.out.println("Status: PKM tidak lolos pendanaan. Dana penghargaan tidak diberikan");
+                }
+            } else {
+                System.out.println("Status: Dokumen tidak lengkap (kurang " + (4-jumlahDokumen)+ "dokumen). Dana penghargaan tidak diberikan");
+            }
         } else {
-            
+            System.out.println("Kegiatan diluar kedua ketentuan, tidak memperoleh dana penghargaan");
         }
         sc.close();
     }
